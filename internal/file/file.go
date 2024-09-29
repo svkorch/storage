@@ -1,6 +1,8 @@
 package file
 
 import (
+	"fmt"
+
 	"github.com/google/uuid"
 )
 
@@ -21,4 +23,8 @@ func NewFile(filename string, blob []byte) (*File, error) {
 		Name: filename,
 		Data: blob,
 	}, nil
+}
+
+func (f *File) String() string {
+	return fmt.Sprintf("File(%s, %v), Size=%d", f.Name, f.ID, len(f.Data))
 }
