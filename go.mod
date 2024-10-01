@@ -1,4 +1,4 @@
-module github.com/svkorch/storage
+module github.com/svkorch/storage/v2
 
 go 1.21.5
 
